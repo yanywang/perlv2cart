@@ -1,8 +1,8 @@
 ---
-Name: mysql
-Cartridge-Short-Name: MYSQL
+Name: diymysql
+Cartridge-Short-Name: DIYMYSQL
 Architecture: noarch
-Display-Name: MySQL 5.1
+Display-Name: DIYMySQL 5.1
 Description: MySQL is a multi-user, multi-threaded SQL database server.
 Version: '5.1'
 Versions:
@@ -10,9 +10,9 @@ Versions:
 Cartridge-Version: 0.2.6
 Compatible-Versions:
 - 0.2.5
-Cartridge-Vendor: liap
+Cartridge-Vendor:liap 
 License: GPL
-Vendor: liap
+Vendor: Oracle
 Categories:
 - service
 - database
@@ -52,16 +52,12 @@ Endpoints:
   Public-Port-Name: DB_PROXY_PORT
   Protocols:
   - mysql
-
 Install-Build-Required: false
 #Source-Url: https://github.com/wjiangjay/perlv2cart/raw/master/perlv2cart.tar.gz
-##Source-Url: https://github.com/anpingli/perlv2cart.git
-###Source-Url: git://github.com/wsun1/perlv2cart.git
-##Source-Url: https://github.com/wjiangjay/perlv2cart/raw/master/diymysql.zip
+###Source-Url: https://github.com/anpingli/perlv2cart.git
+####Source-Url: git://github.com/wsun1/perlv2cart.git
+###Source-Url: https://github.com/wjiangjay/perlv2cart/raw/master/diymysql.zip
 Source-Url: https://github.com/wjiangjay/perlv2cart/raw/master/diymysql/diymysql.tar.gz
-###Source-Url: file:///root/perlv2cart/perlv2cart.zip
-###Source-Url: http://baidu.com
-###Source-Url: file:///root/perlv2cart/
-###Source-Url: git://github.com/test
-###Source-Md5: 5e2aa8d228a4ed39c9a098d141f77eaf
+####Source-Url: file:///root/perlv2cart/perlv2cart.zip
+####Source-Url: http://baidu.com
 #
