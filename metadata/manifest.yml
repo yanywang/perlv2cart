@@ -9,9 +9,9 @@ Vendor: perl.org
 Cartridge-Version: 0.0.1
 Cartridge-Vendor: wjiangtest
 Categories:
-  - service
-  - perl
-  - web_framework
+- service
+- database
+- embedded
 Website: http://www.perl.org
 Help-Topics:
   "Developer Center": https://www.openshift.com/developers
