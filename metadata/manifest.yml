@@ -7,7 +7,7 @@ License: "GPL v2"
 License-Url: http://dev.perl.org/licenses/
 Vendor: perl.org
 Cartridge-Version: 0.0.1
-Cartridge-Vendor: wsuntest
+Cartridge-Vendor: wjiangtest
 Categories:
   - service
   - perl
@@ -75,7 +75,7 @@ Group-Overrides:
   - components:
     - perl-5.10
     - web_proxy
-    - wsuntest-perl-5.10
+    - wjiang-perl-5.10
 Endpoints:
   - Private-IP-Name:   IP
     Private-Port-Name: PORT
@@ -89,14 +89,13 @@ Endpoints:
         Backend:       ""
         Options:       { health: true }
 Install-Build-Required: false
- #Source-Url: https://github.com/anpingli/perlv2cart/raw/master/perlv2cart.tar.gz
- # Source-Url: http://github.com/anpingli/perlv2cart.git
- Source-Url: git://github.com/anpingli/diycartridge.git
- #   Source-Url: https://github.com/anpingli/perlv2cart/raw/master/perlv2cart.zip
- #    #Source-Url: file:///root/perlv2cart/perlv2cart.zip
- #     #Source-Url: http://baidu.com
- #      #Source-Url: file:///root/perlv2cart/
- #       #Source-Url: git://github.com/test
-  source-Md5: b9ffaa6e0a41223458b3e6f8d9c0c33d
-
-
+#Source-Url: https://github.com/wjiangjay/perlv2cart/raw/master/perlv2cart.tar.gz
+Source-Url: https://github.com/anpingli/perlv2cart.git 
+##Source-Url: git://github.com/wsun1/perlv2cart.git
+##Source-Url: https://github.com/wjiangjay/perlv2cart/raw/master/perlv2cart.zip
+##Source-Url: file:///root/perlv2cart/perlv2cart.zip
+##Source-Url: http://baidu.com
+##Source-Url: file:///root/perlv2cart/
+##Source-Url: git://github.com/test
+##Source-Md5: accfde07f9216fcf3f63d7b3d7266fc8
+#
