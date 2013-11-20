@@ -1,8 +1,8 @@
 ---
-Name: diymysql
-Cartridge-Short-Name: DIYMYSQL
+Name: mysql
+Cartridge-Short-Name: MYSQL
 Architecture: noarch
-Display-Name: DIYMySQL 5.1
+Display-Name: MySQL 5.1
 Description: MySQL is a multi-user, multi-threaded SQL database server.
 Version: '5.1'
 Versions:
