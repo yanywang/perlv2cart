@@ -53,4 +53,4 @@ Endpoints:
   Protocols:
   - mysql
 Install-Build-Required: false
-Source-Url: git://github.com/anpingli/diymysql
+Source-Url: git://github.com/anpingli/diymysql1
