@@ -87,4 +87,4 @@ Endpoints:
 
 Install-Build-Required: false
 #Source-Url: file:///home/liap/git/perlv2cart/diyperl.zip
-Source-Url: file:///home/liap/git/diyperl/metadata
+Source-Url: file:///home/liap/git/diyperl/
