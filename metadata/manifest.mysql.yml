@@ -53,12 +53,4 @@ Endpoints:
   Protocols:
   - mysql
 Install-Build-Required: false
-#Source-Url: https://github.com/anpingli/diymysql/raw/master/perlv2cart.tar.gz
 Source-Url: git://github.com/anpingli/diymysql.git
-##Source-Url: https://github.com/anpingli/diymysql/raw/master/perlv2cart.zip
-####Source-Url: file:///root/diymysql/perlv2cart.zip
-####Source-Url: http://baidu.com
-####Source-Url: file:///root/diymysql/
-####Source-Url: git://github.com/test
-####Source-Md5: 5e2aa8d228a4ed39c9a098d141f77eaf
-#
