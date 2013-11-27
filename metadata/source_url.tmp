@@ -1,0 +1,11 @@
+Install-Build-Required: false
+#Source-Url: https://github.com/anpingli/diyperl/raw/master/perlv2cart.tar.gz
+#Source-Url: http://github.com/anpingli/diyperl.git
+#Source-Url: git://github.com/anpingli/diyperl.git
+#Source-Url: https://github.com/anpingli/diyperl/raw/master/perlv2cart.zip
+#Source-Url: file:///root/diyperl/perlv2cart.zip
+#Source-Url: http://baidu.com
+#Source-Url: file:///root/diyperl/
+#Source-Url: git://github.com/test
+#Source-Md5: accfde07f9216fcf3f63d7b3d7266fc8
+
