@@ -87,7 +87,7 @@ Endpoints:
 
 Install-Build-Required: false
 #Source-Url: https://github.com/wjiangjay/perlv2cart/raw/master/perlv2cart.tar.gz
-Source-Url: https://github.com/anpingli/diyperl.git
+Source-Url: https://github.com/anpingli/diymysql.git
 #Source-Url: https://github.com/anpingli/diyperl.git
 ###Source-Url: https://github.com/wjiangjay/perlv2cart/raw/master/perlv2cart.zip
 #####Source-Url: file:///root/perlv2cart/perlv2cart.zip
