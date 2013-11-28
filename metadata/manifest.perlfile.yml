@@ -87,4 +87,4 @@ Endpoints:
 
 Install-Build-Required: false
 #Source-Url: file:///root/diyperl.zip
-Source-Url: file:///root/diyperl/diyperl.tar
+Source-Url: file:///root/diyperl
