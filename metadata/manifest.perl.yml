@@ -1,15 +1,15 @@
 ---
 Name: perl
 Cartridge-Short-Name: PERL
-Display-Name: Perl 5.10
+Display-Name: Perl 5.11
 Description: Perl is a high-level, general-purpose, interpreted, dynamic programming
   language. Dynamic content produced by Perl scripts can be served in response to
   incoming web requests.
-Version: '5.10'
+Version: '5.11'
 License: GPL v2
 License-Url: http://dev.perl.org/licenses/
 Vendor: perl.org
-Cartridge-Version: 0.0.7
+Cartridge-Version: 0.0.6
 Compatible-Versions:
 - 0.0.6
 Cartridge-Vendor: liap
@@ -52,7 +52,7 @@ Cart-Data:
   Type: environment
   Description: Unique ID which identified the gear. This value changes between gears.
 Provides:
-- perl-5.10
+- perl-5.11
 - perl
 Publishes: 
 Subscribes:
