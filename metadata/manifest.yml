@@ -84,12 +84,3 @@ Endpoints:
     Backend: ''
     Options:
       health: true
-
-Install-Build-Required: false
-#Source-Url: https://github.com/anpingli/diymyperl.git
-#Source-Url: file:///root/perlv2cart/perlv2cart.zip
-Source-Url: http://baidu.com
-#Source-Url: file:///home/liap/git/diyperl/
-#Source-Url: git://github.com/test
-#Source-Md5: 5e2aa8d228a4ed39c9a098d141f77eaf
-#
