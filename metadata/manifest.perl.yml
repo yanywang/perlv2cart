@@ -9,7 +9,7 @@ Version: '5.10'
 License: GPL v2
 License-Url: http://dev.perl.org/licenses/
 Vendor: perl.org
-Cartridge-Version: 0.0.8
+Cartridge-Version: 0.0.7
 Compatible-Versions:
 - 0.0.6
 Cartridge-Vendor: liap
@@ -52,7 +52,7 @@ Cart-Data:
   Type: environment
   Description: Unique ID which identified the gear. This value changes between gears.
 Provides:
-- perl-5.11
+- perl-5.10
 - perl
 Publishes: 
 Subscribes:
