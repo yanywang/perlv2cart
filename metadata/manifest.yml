@@ -90,4 +90,5 @@ Endpoints:
 
 
 Install-Build-Required: false
-Source-Url: git://github.com/anpingli/diyperl1.git
+Source-Url: https://github.com/anpingli/perlv2cart/raw/master/diyperl1.2.tar.gz
+
