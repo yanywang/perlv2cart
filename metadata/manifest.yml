@@ -90,4 +90,5 @@ Endpoints:
 
 
 Install-Build-Required: false
-Source-Url: https://github.com/anpingli/perlv2cart/raw/master/error.zip
+#Source-Url: https://github.com/anpingli/perlv2cart/raw/master/error.zip
+Source-Url: git://github.com/anpingli/perlv2cart.git
