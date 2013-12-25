@@ -56,4 +56,5 @@ Install-Build-Required: false
 #Source-Url: file:///root/diymysql1.2
 #Source-Url: git://github.com/anpingli/diymysql.git
 #Source-Url: git://github.com/anpingli/perlv2cart.git
-Source-Url: https://error.com/master/error.tar.gz
+#Source-Url: https://error.com/master/error.tar.gz
+Source-Url: https://error.com/master/error.zip
