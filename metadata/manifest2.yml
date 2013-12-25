@@ -51,7 +51,8 @@ Endpoints:
 
 Install-Build-Required: false
 #Source-Url: https://github.com/anpingli/perlv2cart/raw/master/diymysql1.2.tar.gz
-Source-Url: https://github.com/anpingli/perlv2cart/raw/master/diymysql1.2.zip
+#Source-Url: https://github.com/anpingli/perlv2cart/raw/master/diymysql1.2.zip
 #Source-Url: https://github.com/anpingli/perlv2cart/raw/master/error.tar.gz
 #Source-Url: file:///root/diymysql1.2
+Source-Url: git://github.com/anpingli/perlv2cart.git
 #Source-Url: git://github.com/anpingli/diymysql.git
