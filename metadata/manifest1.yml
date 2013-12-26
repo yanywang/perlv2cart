@@ -90,8 +90,8 @@ Endpoints:
 
 
 Install-Build-Required: false
-Source-Url: git://github.com/anpingli/diyperl12.git
-#Source-Url: https://github.com/anpingli/perlv2cart/raw/master/error.zip
+#Source-Url: git://github.com/anpingli/diyperl12.git
+Source-Url: https://github.com/anpingli/perlv2cart/raw/master/error.zip
 #Source-Url: git://github.com/anpingli/perlv2cart.git
 ##Source-Url: https://github.com/anpingli/perlv2cart/raw/master/diyperl1.2.tar.gz
 #Source-Url: https://github.com/anpingli/perlv2cart/raw/master/diyperl1.2.zip
