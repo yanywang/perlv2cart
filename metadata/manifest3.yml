@@ -1,10 +1,10 @@
 Name: mysql
 Cartridge-Short-Name: MYSQL
 Architecture: noarch
-Display-Name: MySQL Database 5.5
+Display-Name: MySQL Database 5.1
 Description: "MySQL is a multi-user, multi-threaded SQL database server."
-Version: '5.5'
-Versions: [5.5]
+Version: '5.1'
+Versions: [5.1]
 Cartridge-Version: 0.2.0
 Cartridge-Vendor: liap
 License: GPL
@@ -32,7 +32,7 @@ Cart-Data:
 Suggests:
   - phpmyadmin-3.4
 Provides:
-  - mysql-5.5
+  - mysql-5.1
   - mysql 
   - mysql-singleton-master
 Conflicts:
@@ -50,12 +50,4 @@ Endpoints:
     Public-Port-Name:  DB_PROXY_PORT
 
 Install-Build-Required: false
-#Source-Url: https://github.com/anpingli/perlv2cart/raw/master/diymysql1.2.tar.gz
-#Source-Url: https://github.com/anpingli/perlv2cart/raw/master/diymysql1.2.zip
-#Source-Url: git://github.com/anpingli/diymysql1.2.git
-#Source-Url: https://github.com/anpingli/perlv2cart/raw/master/error.tar.gz
-#Source-Url: https://github.com/anpingli/perlv2cart/raw/master/error.zip
-#Source-Url: file:///root/diymysql1.2
-#Source-Url: git://github.com/anpingli/diymysql.git
-#Source-Url: git://github.com/anpingli/perlv2cart.git
 Source-Url: https://error.com/master/error.tar.gz
