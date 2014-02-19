@@ -86,6 +86,5 @@ Endpoints:
       health: true
 
 Install-Build-Required: false
-#Source-Url: git://github.com/anpingli/diyperl.git
 Source-Url: git://github.com/anpingli/diyperl.git
 
