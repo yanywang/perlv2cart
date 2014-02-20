@@ -1,5 +1,5 @@
 ---
-Name: Mysql
+Name: m1ysql
 Cartridge-Short-Name: MYSQL
 Architecture: noarch
 Display-Name: MySQL 5.1
