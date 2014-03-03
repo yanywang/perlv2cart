@@ -1,0 +1,28 @@
+1. Prepare on your machine
+Run "gem install bundler"
+Run "yum install ruby-devel mysql-devel gcc nodejs npm"
+If your system is RHEL, maybe there is no nodejs package, pls run the following command:
+# yum install nodejs010-nodejs nodejs010-npm
+# eval $( scl enable nodejs010 'echo "export PATH=$PATH; export LD_LIBRARY_PATH=$LD_LIBRARY_PATH; export MANPATH=$MANPATH"' )
+# which node
+/opt/rh/nodejs010/root/usr/bin/node
+# export PYTHONPATH="/opt/rh/nodejs010/root/usr/lib/python2.6/site-packages"
+# npm install websocket
+2. Run "rhc setup" to setup correct domain and upload ssh key
+To avoid ssh interaction, add the following lines to ~/.ssh/config
+Host *ose*
+    IdentityFile ~/.ssh/id_rsa
+    VerifyHostKeyDNS yes
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+Please replace "ose" using your domain, and replace value in app.conf according to your environment.
+3. Modify rhlogin, password and domain in app.conf according to your values.
+4. Run "create_test_data.sh" to create test app, here we are using cross-cover testing strategy, E.g:
+non-scalable jbosseap + mysql
+scalable jbosseap + postgresql
+scalable python-2.6 + hot_deploy + jenkins build
+Not test every app and db matrix.
+5. Run "pre_check.sh" to validate your app is working well.
+6. Run move testing or upgrade testing manually.
+7. Run "move_post_check.sh" or "upgrade_post_check.sh" to validate your app is still working well.
+
