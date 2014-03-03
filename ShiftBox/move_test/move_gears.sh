@@ -11,8 +11,8 @@ source app.conf
 ##########################
 # Globle Variables
 #Turn off Remote Execute 
-#RemoteExec=0|1
-RemoteExec=0
+#RemoteExec=0|1|2
+RemoteExec=2
 log_file=log/${script_name}-`date +"%F-%T"`.log
 remotelog=tmp/remotecm.log
 
@@ -23,28 +23,11 @@ RemoteExecute() {
     # $3 hostname 
     # $4 remotecmd
 
-
-if [ $RemoteExec == 1 ]; then
-    print_warnning "Function: the Remote Execution is disabled, please execute the command below manualy"
-    print_info "$remotecmd"
-    print_info "Have your executed the command above(y|n)? "
-    read choice
-
-    if [ X"$choice" != X"y" ]; then
-        print_info " please execute the command later, you can find it in $Outputsh " 
-    fi
-    
-    return 0
-fi
-
-
 # Check the argurment
 if [ 4 -gt $# ] ; then
-    print_error " ERROR: Function: 'RemoteExecute $*i'; usage: 'RemoteExecute username password hostname remotecmd'"
+    print_error " ERROR: Function: 'usage: 'RemoteExecute username password hostname remotecmd'"
     return 2
 fi
-
-print_info "RemoteExecute: $*"
 
 username=$1
 password=$2
@@ -52,12 +35,31 @@ hostname=$3
 shift 3
 remotecmd=$@
 
+
+print_info "RemoteExecute: $remotecmd"
+
+if [ $RemoteExec == 2 ]; then
+   return 0
+elif [ $RemoteExec == 1 ]; then
+    print_warnning "Function: the Remote Execution is disabled, please execute the command below manualy"
+    print_info "Have your executed the command above(y|n)? "
+    read choice
+
+    if [ X"$choice" != X"y" ]; then
+        print_info " please execute the command later, you can find it in $log_file " 
+    fi
+    
+    return 0
+fi
+
+
 remotelogsave=${remotelog}-`date +"%F-%T"`.log
 mv $remotelog $remotelogsave
 
 sshhost="ssh $username@$hostname"
 expect -c "
-#    set match_max 65535
+   set timeout 120
+#  set match_max 65535
     log_file $remotelog
     spawn $sshhost
 
@@ -67,6 +69,9 @@ expect -c "
         \"root@\" {send \"$remotecmd \r exit\r\"; exp_continue}
     }
     "
+print_blu_txt "Result:" 
+cat ${remotelog} | print_gre_txt $log_file
+
 return 0
 }
 
@@ -90,48 +95,69 @@ checkapps()
    done
 return 0
 }
-notsamenode 
+
+issamenode()
 {
-   dsn=$1
+   dns=$1
    node=$2
-   gears=$3
-   
+
+   gearip=$(eval ping $dns -c  2|sed '1{s/[^(]*(//;s/).*//;q}')
+   nodeip=$(eval ping $node -c 2|sed '1{s/[^(]*(//;s/).*//;q}')
+
+   if [ X"$gearip" == X"$nodeip" ]; then
+      return 0
+   fi
+   return 1
 }
+
 ########################################
 ###             Main                 ###
 ########################################
 
 #check configure file
-if [ -z $ConfUser -o -z $ConfUserPassword -o -z $ConfBrokerName ]; then
-    print_warning "Setup:Please set ConfUser,ConfUserPassword,ConfBrokerName in app.conf"
+
+if [ -z $rhlogin -o -z $domain -o -z $password ]; then
+    echo "ERROR:Setup:Please set rhlogin,domain and password in app.conf"
     exit 1
 fi
 
+
+if [ -z $ConfUser -o -z $ConfUserPassword -o -z $ConfBrokerName ]; then
+    print_warning "Setup:Please set ConfUser,ConfUserPassword,ConfBrokerName and  ConfNodes in app.conf"
+    exit 1
+fi
+
+gbNodes=(${ConfNodes})
+if [ -z ${gbNodes[1]} ]; then
+    print_error "PrepareError: At least two nodes for Move testing"
+ exit 1
+fi
+
 #check rhc account
-#temp#print_info " Have your setup up your openshift account in this terminal(y/n)?"
-#temp#read choice
-#temp#if [ X"$choicei" != X"y" ]; then
-#temp#   print_warning "Please run 'rhc setup --server your server' at first!"
-#temp#   exit 1
-#temp#fi
-#temp#
-#temp#RemoteExecute "$ConfUser" "$ConfUserPassword" "$ConfBrokerName" "oo-mco ping"
-#temp#GBnodes=`cat tmp/remotecm.log |sed -n "s/time.*$//p"`
-#temp#node2=`echo ${GBnodes}|awk '{print $2}'`
-#temp#if [ -z $node2 ]; then
-#temp#    print_error "PrepareError: At least two nodes for Move testing"
-#temp#exit 1
-#temp#fi
-#temp#
-#temp#RemoteExecute "$ConfUser" "$ConfUserPassword" "$ConfBrokerName" "oo-admin-ctl-district"
-#temp#district=`cat ${remotelog}|grep "No districts created yet"`
-#temp#if [ ! -z $district ]; then
-#temp#    print_error "PrepareError:No district avaible, please specify districts at first"
-#temp#exit 1
-#temp#fi
+#tag# print_info " Have your setup up your openshift account in this terminal(y/n)?"
+#tag# read choice
+#tag# if [ X"$choicei" != X"y" ]; then
+#tag#    print_warning "Please run 'rhc setup --server your server' at first!"
+#tag#    exit 1
+#tag# fi
+#tag# 
+#tag# RemoteExecute "$ConfUser" "$ConfUserPassword" "$ConfBrokerName" "oo-mco ping"
+#tag# GBnodes=`cat tmp/remotecm.log |sed -n "s/time.*$//p"`
+#tag# node2=`echo ${GBnodes}|awk '{print $2}'`
+#tag# if [ -z $node2 ]; then
+#tag#     print_error "PrepareError: At least two nodes for Move testing"
+#tag# exit 1
+#tag# fi
+#tag# 
+#tag# RemoteExecute "$ConfUser" "$ConfUserPassword" "$ConfBrokerName" "oo-admin-ctl-district"
+#tag# district=`cat ${remotelog}|grep "No districts created yet"`
+#tag# if [ ! -z $district ]; then
+#tag#     print_error "PrepareError:No district avaible, please specify districts at first"
+#tag# exit 1
+#tag# fi
 
 
-applist=`rhc apps|grep '@ http'|awk '{print $1}'|sed -e :a -e "N;s/\n/ /;ba"`
+applist=`rhc apps -l $rhlogin -p $password |grep '@ http'|awk '{print $1}'|sed -e :a -e "N;s/\n/ /;ba"`
 
 if [ $# -eq 0 ]; then
      while [ 1==1 ]
@@ -146,16 +172,14 @@ if [ $# -eq 0 ]; then
           elif [ X"$choice" == X"q" ]; then
               exit 0
           else
-              checkapps $choice
-              if [ $? == 0 ]; then
+              if checkapps $choice; then
                    app_list=$choice
                    break
               fi
           fi
      done
 else
-    checkapps $*
-    if [ $? == 1 ]; then
+    if ! checkapps $* ; then
         exit 1
     fi
     app_list="$*"
@@ -165,31 +189,34 @@ if [ ! -d tmp ]; then
     mkdir tmp 
 fi
 
+istep="1"
 for app in ${app_list}; do
-    output=`rhc app show ${app} --gears|awk 'NR>2{print $1"_"$3"_"$5"_"$6}'`
-    print_gre_txt "$output" 
+    output=`rhc app show ${app} --gears -l $rhlogin -p $password|awk 'NR>2 {print $0}'|sed 's/ /_/g'`
+    print_blu_txt "\n\n${istep} Move gears for $app" 
+
+    jstep="1"
+    print_blu_txt "$output" 
     for gear in ${output};do
         uuid=`echo $gear|awk -F"_" '{print $1}'`
-        type=`echo $gear|awk -F"_" '{print $2}'`
+        type=`echo $gear|awk -F" " '{print $3}'`
         dns=`echo $gear|awk -F"@" '{print $2}'`
-        print_blu_txt "#type:${type}"
-        print_blu_txt "#Move Command:" 
-        targetnode=""
-       gbNodes="nd216.oseanli.cn nd217.oseanli.cn"
-       for node in ${gbNodes};do
-       if [ (notsamenode ${dns} ${node} ${gears}) -eq 0 ];then
-       {
-             targetnode="$node"
-             break;
-       }
-       done
-
-     mvcommand="oo-admin-move --gear_uuid $uuidi -i $targetnode"
-     print_blu_txt "$mvcommand" 
-     RemoteExecute "$ConfUser" "$ConfUserPassword" "$ConfBrokerName" "$mvcommand"
-     print_blu_txt "Result:" 
-     cat ${remotelog} | print_gre_txt -a $log_file
-     print_blu_txt "Help Command:" 
-     print_gre_txt "ssh ${uuid}@${dns}"
+        targetnode=${gbNodes[0]}
+        if issamenode ${dns} ${gbNodes[0]} ; then
+             targetnode="${gbNodes[1]}"
+        fi
+        print_blu_txt "AppName:${app} CartType:${type} "
+        print_blu_txt "\n${istep}.${jstep} Move gear $type:" 
+        mvcommand="oo-admin-move --gear_uuid $uuid -i $targetnode"
+        print_red_txt "$mvcommand" 
+        RemoteExecute "$ConfUser" "$ConfUserPassword" "$ConfBrokerName" "$mvcommand"
+        jstep=`expr $jstep + 1`
+        print_blu_txt "Help Command:" 
+        print_blu_txt "ssh ${uuid}@${dns}"
+        print_blu_txt "http://${dns}"
+        print_blu_txt "ssh root@${targetnode}"
+        print_blu_txt "cd /var/lib/openshift/${uuid}"
+        print_blu_txt "monogo openshift_broker -u openshift -p mongopass"
+        print_blu_txt "db.applicationis.find(\"name:$app\")"
      done
+     istep=`expr $istep + 1`
 done
