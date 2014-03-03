@@ -163,9 +163,9 @@ if [ $# -eq 0 ]; then
      do
           print_info "All apps in server are list as below:"
           print_gre_txt "$applist"
-          print_info "please specify apps to move \n a(all)|appnames(separated by space)|q(quit)"
+          print_info "please specify apps to move \n 0(all)|appnames(separated by space)|q(quit)"
           read choice
-          if [ X"$choice" == X"a" ]; then
+          if [ X"$choice" == X"0" ]; then
               app_list=$applist 
               break
           elif [ X"$choice" == X"q" ]; then
