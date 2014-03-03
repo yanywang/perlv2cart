@@ -1,0 +1,41 @@
+#check configure file
+if [ -z $rhlogin -o -z $domain -o -z $password ]; then
+    echo "ERROR:Setup:Please set rhlogin,domain and password in app.conf"
+    exit 1
+fi
+
+gbApps=""
+
+#User selection checking
+if [ $# -eq 0 ]; then
+     while [ 1 == 1 ]
+     do
+          echo "INFO: Apps list can be selected as below:"
+          echo "---------------------"
+          echo "${app_list}"
+          echo "---------------------"
+          echo "INFO: Please specify apps to Check \n 0(all)|appnames(separated by space)|q(quit)"
+          read choice
+          echo "\n"
+          if [ X"$choice" == X"0" ]; then
+              gbApps=${app_list}
+              break
+          elif [ X"$choice" == X"q" ]; then
+              exit 0
+          else
+	      if checkApps $choice ; then
+                  gbApps=$choice
+                  break
+              fi
+          fi
+     done
+else
+    if ! checkApps $* ; then::
+          echo "INFO: Valid Apps list is as below:"
+          echo "---------------------"
+          echo "${app_list}"
+          echo "---------------------"
+       exit  1
+    fi
+    gbApps="$*"
+fi

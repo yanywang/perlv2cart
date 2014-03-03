@@ -1,0 +1,52 @@
+[1;34mINFO: scalable_jbosseap_app scalable_jbosseap_app1 will be created[0m
+[1;34m***********************************************[0m
+[1;34m***********************************************[0m
+[1;34m***********************************************[0m
+[1;34m***********************************************[0m
+[1;34m***********************************************[0m
+[1;34m***********************************************[0m
+[1;34m***********************************************[0m
+[1;34m***********************************************[0m
+[1;34m***********************************************[0m
+[1;34m***********************************************[0m
+[1;34m***********************************************[0m
+[1;34m***********************************************[0m
+[1;34m***********************************************[0m
+[1;34m***********************************************[0m
+[1;34m***********************************************[0m
+[1;34m***********************************************[0m
+[1;34m***********************************************[0m
+[1;34m***********************************************[0m
+[1;34m***********************************************[0m
+[1;34m***********************************************[0m
+[1;34m***********************************************[0m
+[1;32mCommand:[0m rm -rf jbeappsqldumpupscal && rhc app create jbeappsqldumpupscal jbosseap -p redhat -l hanli1 --scaling
+Using jbosseap-6 (JBoss Enterprise Application Platform 6) for 'jbosseap'
+
+Application Options
+-------------------
+  Domain:     hanli1dom
+  Cartridges: jbosseap-6
+  Gear Size:  default
+  Scaling:    yes
+
+Creating application 'jbeappsqldumpupscal' ... The supplied application name 'jbeappsqldumpupscal' already exists
+[1;32mCommand:[0m ls jbeappsqldumpupscal
+ls: cannot access jbeappsqldumpupscal: No such file or directory
+[1;34m***********************************************[0m
+[1;32mCommand:[0m rm -rf jbeapjksmindelopymentscal && rhc app create jbeapjksmindelopymentscal jbosseap -p redhat -l hanli1 --scaling
+Using jbosseap-6 (JBoss Enterprise Application Platform 6) for 'jbosseap'
+
+Application Options
+-------------------
+  Domain:     hanli1dom
+  Cartridges: jbosseap-6
+  Gear Size:  default
+  Scaling:    yes
+
+Creating application 'jbeapjksmindelopymentscal' ... The supplied application name 'jbeapjksmindelopymentscal' already exists
+[1;32mCommand:[0m ls jbeapjksmindelopymentscal
+ls: cannot access jbeapjksmindelopymentscal: No such file or directory
+[1;34m***********************************************[0m
+[1;31mFailed app list:[0m
+[1;31mjbeappsqldumpupscal jbeapjksmindelopymentscal [0m
