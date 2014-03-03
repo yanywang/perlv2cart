@@ -35,7 +35,6 @@ hostname=$3
 shift 3
 remotecmd=$@
 
-
 print_info "RemoteExecute: $remotecmd"
 
 if [ $RemoteExec == 2 ]; then
@@ -192,9 +191,10 @@ fi
 istep="1"
 for app in ${app_list}; do
     output=`rhc app show ${app} --gears -l $rhlogin -p $password|awk 'NR>2 {print $0}'|sed 's/ /_/g'`
-    print_blu_txt "\n\n${istep} Move gears for $app" 
+    print_blu_txt "\n${istep} Move gears for $app" 
 
     jstep="1"
+    print_blu_txt "Application info:" 
     print_blu_txt "$output" 
     for gear in ${output};do
         uuid=`echo $gear|awk -F"_" '{print $1}'`
@@ -205,12 +205,14 @@ for app in ${app_list}; do
              targetnode="${gbNodes[1]}"
         fi
         print_blu_txt "AppName:${app} CartType:${type} "
-        print_blu_txt "\n${istep}.${jstep} Move gear $type:" 
+        print_blu_txt "${istep}.${jstep} Move gear $type:" 
         mvcommand="oo-admin-move --gear_uuid $uuid -i $targetnode"
         print_red_txt "$mvcommand" 
         RemoteExecute "$ConfUser" "$ConfUserPassword" "$ConfBrokerName" "$mvcommand"
         jstep=`expr $jstep + 1`
+        print_blu_txt "" 
         print_blu_txt "Help Command:" 
+        print_blu_txt "----------" 
         print_blu_txt "ssh ${uuid}@${dns}"
         print_blu_txt "http://${dns}"
         print_blu_txt "ssh root@${targetnode}"

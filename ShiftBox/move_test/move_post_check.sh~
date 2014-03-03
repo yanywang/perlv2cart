@@ -126,8 +126,7 @@ fi
 
 print_blu_txt "***********************************************"
 if isSelectedApp "new_app"; then
-    print_blu_txt "Skip create new app testing!"
-#    create_new_app_check ${new_app} ${rhlogin} ${password} "2" || failed_app="${failed_app}${new_app} "
+    create_new_app_check ${new_app} ${rhlogin} ${password} "2" || failed_app="${failed_app}${new_app} "
 fi
 
 
@@ -257,12 +256,12 @@ if isSelectedApp "scalable_jbosseap_app"; then
 
 fi
 
-#print_blu_txt "***********************************************"
-#if isSelectedApp "scalable_jbosseap_app1"; then
-#    scalable_jbosseap_app1_check ${scalable_jbosseap_app1} ${rhlogin} ${password} "1" "2" "2"  || failed_app="${failed_app}${scalable_jbosseap_app1} "
-#fi
+print_blu_txt "***********************************************"
+if isSelectedApp "scalable_jbosseap_app1"; then
+    scalable_jbosseap_app1_check ${scalable_jbosseap_app1} ${rhlogin} ${password} "1" "2" "2"  || failed_app="${failed_app}${scalable_jbosseap_app1} "
+fi
 
-#print_blu_txt "***********************************************"
+print_blu_txt "***********************************************"
 
 print_warnning "Pls remember to log into web console to make sure it still woking well !!!"
 

@@ -1,0 +1,20 @@
+[1;32mINFO: All apps in server are list as below:[0m
+[1;32mdiyapp djangoapp jbeapjksmindelopymentscal jbeapmysqljksapp jbeappsqldumpupscal jbews2dumpscal jbews2mysqlhotdeployapp jbewsmysqlscal jbewstidyapp jenkinsapp mediawikiminscal newapp nodejs010minhooksdownscal perlmysqlidleapp perlmysqlminjksscal phppsqlcronapp py26mysqlminjkshotdeployscal py27mindelopymentscal railstidyscal redminealiasapp reviewboardapp ruby18mysqlstopscal ruby19dumpapp websocketapp[0m
+[1;32mINFO: please specify apps to move 
+ a(all)|appnames(separated by space)|q(quit)[0m
+[1;34m
+
+1 Move gears for diyapp[0m
+[1;34m530ecdbc4945dcaffa0008ad_started_diy-0.1____small_530ecdbc4945dcaffa0008ad@diyapp-hanli1dom.oseanli.cn[0m
+[1;34mAppName:diyapp CartType: [0m
+[1;34m
+1.1 Move gear :[0m
+[1;31moo-admin-move --gear_uuid 530ecdbc4945dcaffa0008ad -i nd216.oseanli.cn[0m
+[1;32mINFO: RemoteExecute: oo-admin-move --gear_uuid 530ecdbc4945dcaffa0008ad -i nd216.oseanli.cn[0m
+[1;34mHelp Command:[0m
+[1;34mssh 530ecdbc4945dcaffa0008ad@diyapp-hanli1dom.oseanli.cn[0m
+[1;34mhttp://diyapp-hanli1dom.oseanli.cn[0m
+[1;34mssh root@nd216.oseanli.cn[0m
+[1;34mcd /var/lib/openshift/530ecdbc4945dcaffa0008ad[0m
+[1;34mmonogo openshift_broker -u openshift -p mongopass[0m
+[1;34mdb.applicationis.find("name:diyapp")[0m
