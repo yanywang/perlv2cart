@@ -10,9 +10,14 @@ source app.conf
 
 ##########################
 # Globle Variables
-#Turn off Remote Execute 
-#RemoteExec=0|1|2
+#Turn on|off Remote Execute 
+#RemoteExec=0|1|2  0:Enable remote command executed; 1:Execute command interactived; 2: Only print the usefull command and will execute command later.
 RemoteExec=2
+#Turn on|off result checking
+#VerifyPause=0|1|2 0:Don't Paused the scripts; 1:Warting for response; 2: iNotice custome and Exit scripts
+VerifyPause=1
+
+
 log_file=log/${script_name}-`date +"%F-%T"`.log
 remotelog=tmp/remotecm.log
 
@@ -95,6 +100,39 @@ checkapps()
 return 0
 }
 
+verifyMoveResult()
+{
+# don't verify result if move_gears manully.
+if [ $RemoteExec != 0 ]; then
+    return 0
+fi
+
+if cat tmp/remotecm.log |grep 'Successfully moved gear with uuid' ; then
+    return 0
+fi
+# Else execute commands below:
+
+print_warnning "Move failed! Please check those log files in broker and nodes for root caused!"
+# Exit script if the move failed
+if [ VerifyPause == 2 ]; then
+    wall " $script_name failed, please check the result right away!" 
+    exit 1
+fi
+
+while [ VerifyPause == 1 ]; do
+    wall " $script_name failed, please check the result right away!" 
+    print_info "Do you want to continue y(continue)|exit (exit script)"
+    read choice
+
+    if [ X"$choice" != X"y" ]; then
+        return 1
+    elif [ X"$choice" != X"exit" ]; then
+        exit 1
+    fi
+done
+
+
+}
 issamenode()
 {
    dns=$1
@@ -209,7 +247,6 @@ for app in ${app_list}; do
         mvcommand="oo-admin-move --gear_uuid $uuid -i $targetnode"
         print_red_txt "$mvcommand" 
         RemoteExecute "$ConfUser" "$ConfUserPassword" "$ConfBrokerName" "$mvcommand"
-        jstep=`expr $jstep + 1`
         print_blu_txt "" 
         print_blu_txt "Help Command:" 
         print_blu_txt "----------" 
@@ -219,6 +256,8 @@ for app in ${app_list}; do
         print_blu_txt "cd /var/lib/openshift/${uuid}"
         print_blu_txt "monogo openshift_broker -u openshift -p mongopass"
         print_blu_txt "db.applicationis.find(\"name:$app\")"
+
+        jstep=`expr $jstep + 1`
      done
      istep=`expr $istep + 1`
 done
