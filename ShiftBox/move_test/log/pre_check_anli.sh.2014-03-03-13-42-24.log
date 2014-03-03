@@ -1,8 +1,0 @@
-[1;34mWARNNING: Pls firstly run oo-diagnostics on both broker and nodes to make sure your env pass sanity test !!![0m
-[1;34m***********************************************[0m
-[1;32mCommand:[0m curl http://phppsqlcronapp-hanli1dom.oseanli.cn/ | grep 'title' | grep 'Welcome to OpenShift'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100  5216  100  5216    0     0   3210      0  0:00:01  0:00:01 --:--:--  3217
-[1;34mWARNNING: Pls remember to log into web console to make sure it woking well !!![0m
-[1;31mphppsqlcronapp [0m

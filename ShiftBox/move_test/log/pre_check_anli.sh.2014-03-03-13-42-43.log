@@ -1,190 +1,0 @@
-[1;34mWARNNING: Pls firstly run oo-diagnostics on both broker and nodes to make sure your env pass sanity test !!![0m
-[1;34m***********************************************[0m
-[1;32mCommand:[0m curl http://phppsqlcronapp-hanli1dom.oseanli.cn/ | grep 'title' | grep 'Welcome to OpenShift'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  5216  100  5216    0     0  21335      0 --:--:-- --:--:-- --:--:-- 21553
-[1;34m***********************************************[0m
-[1;32mCommand:[0m cd perlmysqlidleapp && sed -i '/title/s/Welcome to OpenShift/1/g' perl/index.pl && git commit -a -m'modify title' && git push && cd -
-/home/anli/git/perlv2cart/ShiftBox/move_test/../lib/util.sh: line 19: cd: perlmysqlidleapp: No such file or directory
-[1;34m***********************************************[0m
-[1;32mCommand:[0m curl http://reviewboardapp-hanli1dom.oseanli.cn/account/login/?next_page=/dashboard/ | grep -i 'review board'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:08 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:09 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:10 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:11 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:12 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:13 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:14 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:15 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:16 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:17 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:18 --:--:--     0 15  5170   15   812    0     0     43      0  0:02:00  0:00:18  0:01:42   170101  5170  101  5170    0     0    275      0  0:00:18  0:00:18 --:--:--  1376
-  <title>Log In | Review Board</title>
-  <a href="/">Review Board</a>
-     <p>Review Board requires JavaScript in order to function.
-[1;34m***********************************************[0m
-[1;32mCommand:[0m curl http://djangoapp-hanli1dom.oseanli.cn/ | grep -i 'Yeah Django'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0  0    62    0    62    0     0     10      0 --:--:--  0:00:06 --:--:--    15
-Yeah Django!
-[1;34m***********************************************[0m
-[1;32mCommand:[0m curl http://redminealiasapp-hanli1dom.oseanli.cn/ | grep -i 'redmine'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:08 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:09 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:10 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:11 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:12 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:13 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:14 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:15 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:16 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:17 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:18 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:19 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:20 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:21 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:22 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:23 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:24 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:25 --:--:--     0112   674  112   674    0     0     26      0  0:00:25  0:00:25 --:--:--   144112   674  112   674    0     0     26      0  0:00:25  0:00:25 --:--:--   184
-<title>Redmine 500 error</title>
-  If you continue to experience problems please contact your Redmine administrator for assistance.</p>
-  <p>If you are the Redmine administrator, check your log files for details about the error.</p>
-[1;32mCommand:[0m curl -H 'Host: bar.hanli1dom.com' http://redminealiasapp-hanli1dom.oseanli.cn/ | grep -i 'redmine'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0112   674  112   674    0     0    104      0  0:00:06  0:00:06 --:--:--   150
-<title>Redmine 500 error</title>
-  If you continue to experience problems please contact your Redmine administrator for assistance.</p>
-  <p>If you are the Redmine administrator, check your log files for details about the error.</p>
-[1;34m***********************************************[0m
-[1;32mCommand:[0m curl http://ruby19dumpapp-hanli1dom.oseanli.cn/ | grep 'title' | grep 'Welcome to OpenShift'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:08 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:09 --:--:--     0 23  5208   23  1206    0     0    123      0  0:00:42  0:00:09  0:00:33   252100  5208  100  5208    0     0    532      0  0:00:09  0:00:09 --:--:--  1382
-[1;34m***********************************************[0m
-[1;32mrm -rf websocket.output && node data/client.js ws://websocketapp-hanli1dom.oseanli.cn:8000/ &> websocket.output[0m
-[1;32mCommand:[0m sleep 10
-[1;32mCommand:[0m pkill -u 500 -f 'node data/client.js'
-[1;34m***********************************************[0m
-[1;32mCommand:[0m curl http://jbewstidyapp-hanli1dom.oseanli.cn/ | grep 'title' | grep 'Welcome to OpenShift'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0 20  5831   20  1186    0     0    315      0  0:00:18  0:00:03  0:00:15   315100  5831  100  5831    0     0   1548      0  0:00:03  0:00:03 --:--:--  1549
-[1;34m***********************************************[0m
-[1;32mCommand:[0m curl http://jbews2mysqlhotdeployapp-hanli1dom.oseanli.cn/ | grep 'title' | grep 'Welcome to OpenShift'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:08 --:--:--     0100  5831  100  5831    0     0    724      0  0:00:08  0:00:08 --:--:--  1444
-[1;34m***********************************************[0m
-[1;32mCommand:[0m curl http://jbeapmysqljksapp-hanli1dom.oseanli.cn/ | grep 'title' | grep 'Welcome to OpenShift'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:08 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:09 --:--:--     0 17  6763   17  1186    0     0    121      0  0:00:55  0:00:09  0:00:46   250100  6763  100  6763    0     0    694      0  0:00:09  0:00:09 --:--:--  1813
-  <title>Welcome to OpenShift</title>
-[1;32mCommand:[0m curl -f http://jbeapmysqljksapp-hanli1dom.oseanli.cn/test.jsp?action=create
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:08 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:09 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:10 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:11 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:12 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:13 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:14 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:15 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:16 --:--:--     0  0    41    0    41    0     0      2      0 --:--:--  0:00:16 --:--:--     9
-
-
-
-
-
-Welcome~
--create-
-speaker1, title1
-
-[1;32mCommand:[0m cd jbeapmysqljksapp && sed -i '/title/s/Welcome to OpenShift/1/g' src/main/webapp/index.html && git commit -a -m'modify title' && git push && cd -
-/home/anli/git/perlv2cart/ShiftBox/move_test/../lib/util.sh: line 19: cd: jbeapmysqljksapp: No such file or directory
-[1;34m***********************************************[0m
-[1;32mCommand:[0m curl http://diyapp-hanli1dom.oseanli.cn/version/ | grep '131final0'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:08 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:09 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:10 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:11 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:12 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:13 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:13 --:--:--     0  0     9    0     9    0     0      0      0 --:--:--  0:00:13 --:--:--     2
-131final0
-[1;32mCommand:[0m cd diyapp && touch test12555 && git add . && git commit -a -m'test' && git push && cd -
-/home/anli/git/perlv2cart/ShiftBox/move_test/../lib/util.sh: line 19: cd: diyapp: No such file or directory
-[1;32mCommand:[0m curl -f http://diyapp-hanli1dom.oseanli.cn/version/
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     9    0     9    0     0    349      0 --:--:-- --:--:-- --:--:--   409
-131final0[1;32mCommand:[0m curl http://diyapp-hanli1dom.oseanli.cn/version/ | grep '131final0'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     9    0     9    0     0    631      0 --:--:-- --:--:-- --:--:--   750
-131final0
-[1;34m***********************************************[0m
-[1;32mTrying to get gear url from output of 'rhc app show -a mediawikiminscal --gears'[0m
-[1;32mCommand:[0m curl 'http://mediawikiminscal-hanli1dom.oseanli.cn/index.php/Main_Page'  | grep 'mediawiki'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:08 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:09 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:10 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:11 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:12 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:13 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:14 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:15 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:16 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:17 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:18 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:19 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:20 --:--:--     0101  1015    0  1015    0     0     48      0 --:--:--  0:00:20 --:--:--   207100 12163    0 12163    0     0    581      0 --:--:--  0:00:20 --:--:--  3121
-<link rel="EditURI" type="application/rsd+xml" href="http://mediawikiminscal-hanli1dom.oseanli.cn/api.php?action=rsd" />
-<link rel="stylesheet" href="/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
-<body class="mediawiki ltr ns-0 ns-subject page-Main_Page skin-vector">
-<ul><li> <a href="http://www.mediawiki.org/wiki/Manual:Configuration_settings" class="external text" rel="nofollow">Configuration settings list</a>
-</li><li> <a href="http://www.mediawiki.org/wiki/Manual:FAQ" class="external text" rel="nofollow">MediaWiki FAQ</a>
-</li><li> <a href="https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce" class="external text" rel="nofollow">MediaWiki release mailing list</a>
-<!-- Saved in parser cache with key openshift_mediawiki:pcache:idhash:1-0!*!0!!en!* and timestamp 20140303054754 -->
-Retrieved from "<a href="http://mediawikiminscal-hanli1dom.oseanli.cn/index.php/Main_Page">http://mediawikiminscal-hanli1dom.oseanli.cn/index.php/Main_Page</a>"</div>
-						<a href="http://www.mediawiki.org/"><img src="/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
-	mediaWiki.loader.load(["mediawiki.util", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
-[1;32mCommand:[0m curl 'http://530ece2c4945dcaffa000908-hanli1dom.oseanli.cn/index.php/Main_Page'  | grep 'mediawiki'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 12187    0 12187    0     0  19469      0 --:--:-- --:--:-- --:--:-- 19561
-<link rel="stylesheet" href="/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
-<body class="mediawiki ltr ns-0 ns-subject page-Main_Page skin-vector">
-<ul><li> <a href="http://www.mediawiki.org/wiki/Manual:Configuration_settings" class="external text" rel="nofollow">Configuration settings list</a>
-</li><li> <a href="http://www.mediawiki.org/wiki/Manual:FAQ" class="external text" rel="nofollow">MediaWiki FAQ</a>
-</li><li> <a href="https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce" class="external text" rel="nofollow">MediaWiki release mailing list</a>
-<!-- Saved in parser cache with key openshift_mediawiki:pcache:idhash:1-0!*!0!!en!* and timestamp 20140303054754 -->
-						<a href="http://www.mediawiki.org/"><img src="/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
-	mediaWiki.loader.load(["mediawiki.util", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
-[1;32mCommand:[0m test 2 -eq 2
-[1;34mWARNNING: Pls check http://mediawikiminscal-hanli1dom.oseanli.cn/haproxy-status page to make sure all web gears are listed there!!![0m
-[1;34m***********************************************[0m
-[1;32mTrying to get gear url from output of 'rhc app show -a perlmysqlminjksscal --gears'[0m
-[1;32mCommand:[0m curl 'http://perlmysqlminjksscal-hanli1dom.oseanli.cn/'  | grep 'title' | grep 'Welcome to OpenShift'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  5215    0  5215    0     0  28974      0 --:--:-- --:--:-- --:--:-- 29463
-[1;34m***********************************************[0m
-[1;32mTrying to get gear url from output of 'rhc app show -a py26mysqlminjkshotdeployscal --gears'[0m
-[1;32mCommand:[0m curl 'http://py26mysqlminjkshotdeployscal-hanli1dom.oseanli.cn/'  | grep 'title' | grep 'Welcome to OpenShift'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 16535  100 16535    0     0  71452      0 --:--:-- --:--:-- --:--:-- 72205
-[1;34m***********************************************[0m
-[1;32mTrying to get gear url from output of 'rhc app show -a py27mindelopymentscal --gears'[0m
-[1;32mCommand:[0m curl 'http://py27mindelopymentscal-hanli1dom.oseanli.cn/'  | grep 'title' | grep 'Welcome to OpenShift'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  5214  100  5214    0     0   128k      0 --:--:-- --:--:-- --:--:--  137k
-[1;34m***********************************************[0m
-[1;32mCommand:[0m curl http://ruby18mysqlstopscal-hanli1dom.oseanli.cn/ | grep 'rhc-cartridge'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0133   133  133   133    0     0    309      0 --:--:-- --:--:-- --:--:--   311133   133  133   133    0     0    309      0 --:--:-- --:--:-- --:--:--   310
-[rhc-cartridge1]snapshot/restore big mysql data to existing app<br />[rhc-cartridge1]snapshot/restore big mysql data to new app<br />
-[1;32mCommand:[0m cd ruby18mysqlstopscal && sed -i 's/rhc-cartridge/rhc-cartridge1/g' config.ru && git commit -a -m'modify title' && git push && cd -
-/home/anli/git/perlv2cart/ShiftBox/move_test/../lib/util.sh: line 19: cd: ruby18mysqlstopscal: No such file or directory
-[1;34m***********************************************[0m
-[1;32mCommand:[0m curl http://railstidyscal-hanli1dom.oseanli.cn/ | grep -i 'rails'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0107   107    0   107    0     0   1378      0 --:--:-- --:--:-- --:--:--  1426
-[1;34m***********************************************[0m
-[1;32mTrying to get gear url from output of 'rhc app show -a nodejs010minhooksdownscal --gears'[0m
-[1;32mCommand:[0m curl 'http://nodejs010minhooksdownscal-hanli1dom.oseanli.cn/'  | grep 'title' | grep 'Welcome to OpenShift'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 50  5216   50  2631    0     0   3703      0  0:00:01 --:--:--  0:00:01  3710100  5216  100  5216    0     0   7340      0 --:--:-- --:--:-- --:--:--  7356
-[1;34m***********************************************[0m
-[1;32mCommand:[0m curl http://jbewsmysqlscal-hanli1dom.oseanli.cn/ | grep 'title' | grep 'Welcome to OpenShift'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100  5831  100  5831    0     0   5725      0  0:00:01  0:00:01 --:--:--  5739
-[1;34m***********************************************[0m
-[1;32mCommand:[0m curl http://jbews2dumpscal-hanli1dom.oseanli.cn/ | grep 'title' | grep 'Welcome to OpenShift'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 19  5831   19  1105    0     0   1935      0  0:00:03 --:--:--  0:00:03  1942100  5831  100  5831    0     0  10204      0 --:--:-- --:--:-- --:--:-- 10229
-[1;34m***********************************************[0m
-[1;32mCommand:[0m curl http://jbeappsqldumpupscal-hanli1dom.oseanli.cn/ | grep 'title' | grep 'Welcome to OpenShift'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0100  6744  100  6744    0     0   2156      0  0:00:03  0:00:03 --:--:--  2158
-[1;34m***********************************************[0m
-[1;32mTrying to get gear url from output of 'rhc app show -a jbeapjksmindelopymentscal --gears'[0m
-[1;32mCommand:[0m curl 'http://jbeapjksmindelopymentscal-hanli1dom.oseanli.cn/'  | grep 'title' | grep 'Welcome to OpenShift'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0 16  6763   16  1105    0     0    319      0  0:00:21  0:00:03  0:00:18   319100  6763  100  6763    0     0   1955      0  0:00:03  0:00:03 --:--:--  1956
-  <title>Welcome to OpenShift</title>
-[1;32mCommand:[0m curl 'http://530eda624945dc0d72000037-hanli1dom.oseanli.cn/'  | grep 'title' | grep 'Welcome to OpenShift'
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0 17  6744   17  1186    0     0    677      0  0:00:09  0:00:01  0:00:08   678100  6744  100  6744    0     0   3852      0  0:00:01  0:00:01 --:--:--  3855
-[1;34mWARNNING: Pls remember to log into web console to make sure it woking well !!![0m
-[1;31mphppsqlcronapp perlmysqlidleapp ruby19dumpapp websocketapp jbewstidyapp jbews2mysqlhotdeployapp jbeapmysqljksapp perlmysqlminjksscal py26mysqlminjkshotdeployscal py27mindelopymentscal ruby18mysqlstopscal railstidyscal nodejs010minhooksdownscal jbewsmysqlscal jbews2dumpscal jbeappsqldumpupscal jbeapjksmindelopymentscal [0m
