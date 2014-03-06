@@ -54,6 +54,7 @@ Endpoints:
   - mysql
 Install-Build-Required: false
 #Source-Url: git://github.com/anpingli/diymysql.git
+Source-Url: https://github.com/anpingli/perlv2cart/raw/master/diymysql.tar.gz
 #Source-Url: https://github.com/anpingli/perlv2cart/raw/master/error.zip
-Source-Url: https://www.163.com/anpingli/perlv2cart/raw/master/error.zip
+#Source-Url: https://www.163.com/anpingli/perlv2cart/raw/master/error.zip
 
