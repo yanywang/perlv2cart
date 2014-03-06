@@ -98,5 +98,6 @@ Install-Build-Required: false
 #Source-Url: https://github.com/anpingli/perlv2cart/raw/master/error.tar.gz
 #Source-Url: file:///root/diyperl1.2
 #Source-Url: git://github.com/anpingli/perlv2cart.git
-Source-Url: https://error.com/master/error.tar.gz
+Source-Url: git://github.com/anpingli/perlv2cart.git
+#Source-Url: https://error.com/master/error.tar.gz
 #Source-Url: https://error.com/master/error.zip

@@ -1,1 +1,5 @@
-diyapp djangoapp jbeapjksmindelopymentscal jbeapmysqljksapp jbeappsqldumpupscal jbews2dumpscal jbews2mysqlhotdeployapp jbewsmysqlscal jbewstidyapp jenkinsapp mediawikiminscal nodejs010minhooksdownscal perlmysqlidleapp perlmysqlminjksscal phppsqlcronapp py26mysqlminjkshotdeployscal py27mindelopymentscal railstidyscal redminealiasapp reviewboardapp ruby18mysqlstopscal ruby19dumpapp websocketapp
+#!/bin/bash
+CONF_NAMED_ENTRIES1="broker:192.168.0.1,node:192.168.0.2"
+CONF_NAMED_ENTRIES2="broker:192.168.0.1,node:192.168.0.2"
+echo ${CONF_NAMED_ENTRIES1//,/ }
+

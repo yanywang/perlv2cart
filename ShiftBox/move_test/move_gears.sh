@@ -52,7 +52,7 @@ elif [ $RemoteExec == 1 ]; then
     if [ X"$choice" != X"y" ]; then
         print_info " please execute the command later, you can find it in $log_file " 
     fi
-    
+
     return 0
 fi
 
@@ -234,9 +234,9 @@ for app in ${app_list}; do
     jstep="1"
     print_blu_txt "Application info:" 
     print_blu_txt "$output" 
-    for gear in ${output};do
-        uuid=`echo $gear|awk -F"_" '{print $1}'`
-        type=`echo $gear|awk -F" " '{print $3}'`
+    for gear in ${output//_/};do
+        uuid=`echo $gear|awk '{print $1}'`
+        type=`echo $gear|awk '{print $3}'`
         dns=`echo $gear|awk -F"@" '{print $2}'`
         targetnode=${gbNodes[0]}
         if issamenode ${dns} ${gbNodes[0]} ; then
@@ -247,6 +247,7 @@ for app in ${app_list}; do
         mvcommand="oo-admin-move --gear_uuid $uuid -i $targetnode"
         print_red_txt "$mvcommand" 
         RemoteExecute "$ConfUser" "$ConfUserPassword" "$ConfBrokerName" "$mvcommand"
+        verifyMoveResult
         print_blu_txt "" 
         print_blu_txt "Help Command:" 
         print_blu_txt "----------" 
