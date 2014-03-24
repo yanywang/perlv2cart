@@ -16,12 +16,15 @@ Host *ose*
     StrictHostKeyChecking no
     UserKnownHostsFile /dev/null
 Please replace "ose" using your domain, and replace value in app.conf according to your environment.
-3. Run "create_test_data.sh" to create test app, here we are using cross-cover testing strategy, E.g:
+3. Modify rhlogin, password and domain in app.conf according to your values.
+4. Run "create_test_data.sh" to create test app, here we are using cross-cover testing strategy, E.g:
 non-scalable jbosseap + mysql
 scalable jbosseap + postgresql
 scalable python-2.6 + hot_deploy + jenkins build
 Not test every app and db matrix.
-4. Run "pre_check.sh" to validate your app is working well.
-5. Run move testing or upgrade testing manually.
-6. Run "move_post_check.sh" or "upgrade_post_check.sh" to validate your app is still working well.
+5. Run "pre_check.sh" to validate your app is working well.
+6. Run move testing or upgrade testing manually.
+   you can use move_gears.sh to create move commands.
+   if expect is installed, you also can run move testing with it.
+7. Run "move_post_check.sh" or "upgrade_post_check.sh" to validate your app is still working well.
 
