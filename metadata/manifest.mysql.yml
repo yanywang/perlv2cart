@@ -56,5 +56,6 @@ Install-Build-Required: false
 #Source-Url: git://github.com/anpingli/diymysql.git
 #Source-Url: https://github.com/anpingli/perlv2cart/raw/master/mysql.tar.gz
 #Source-Url: https://github.com/anpingli/perlv2cart/raw/master/error.tar.gz
-Source-Url: https://github.com/anpingli/perlv2cart/raw/master/mysql.zip
+#Source-Url: https://github.com/anpingli/perlv2cart/raw/master/mysql.zip
+Source-Url: https://github.com/anpingli/perlv2cart/raw/master/diyperl.zip
 
