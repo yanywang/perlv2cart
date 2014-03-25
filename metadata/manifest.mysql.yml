@@ -53,4 +53,6 @@ Endpoints:
   Protocols:
   - mysql
 Install-Build-Required: false
-Source-Url: git://github.com/anpingli/diymysql.git
+#Source-Url: git://github.com/anpingli/diymysql.git
+Source-Url: https://github.com/anpingli/perlv2cart/raw/master/mysql.tar.gz
+
