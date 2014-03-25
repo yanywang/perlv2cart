@@ -12,7 +12,7 @@ Vendor: perl.org
 Cartridge-Version: 0.0.7
 Compatible-Versions:
 - 0.0.6
-Cartridge-Vendor: REDHAT
+Cartridge-Vendor: redhat
 Categories:
 - service
 - perl
