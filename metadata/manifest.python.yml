@@ -16,7 +16,7 @@ License-Url: http://docs.python.org/3/license.html
 Vendor: python.org
 Cartridge-Version: 0.0.16
 Compatible-Versions: []
-Cartridge-Vendor: redhatoo
+Cartridge-Vendor: liap
 Categories:
 - service
 - python
