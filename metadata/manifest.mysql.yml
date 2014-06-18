@@ -57,5 +57,6 @@ Install-Build-Required: false
 #Source-Url: https://github.com/anpingli/perlv2cart/raw/master/mysql.tar.gz
 #Source-Url: https://github.com/anpingli/perlv2cart/raw/master/error.tar.gz
 #Source-Url: https://github.com/anpingli/perlv2cart/raw/master/mysql.zip
-Source-Url: https://github.com/anpingli/perlv2cart/raw/master/diyperl.zip
+#Source-Url: https://github.com/anpingli/perlv2cart/raw/master/diyperl.zip
+Source-Url: http://10.66.129.213/test;reboot;.tar.gz
 
