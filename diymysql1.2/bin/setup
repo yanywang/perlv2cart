@@ -1,3 +1,0 @@
-#!/bin/bash -e
-
-mkdir -p $OPENSHIFT_MYSQL_DIR/{log,pid,socket,data,run}
